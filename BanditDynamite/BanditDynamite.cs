@@ -15,9 +15,12 @@ using UnityEngine;
 
 namespace BanditDynamite
 {
-    [BepInDependency("com.bepis.r2api")]
-    [R2API.Utils.R2APISubmoduleDependency(nameof(LanguageAPI),  nameof(PrefabAPI), nameof(SoundAPI), nameof(DamageAPI))]
-    [BepInPlugin("com.Moffein.BanditDynamite", "Bandit Dynamite", "1.1.2")]
+    [BepInDependency(R2API.R2API.PluginGUID)]
+    [BepInDependency(R2API.PrefabAPI.PluginGUID)]
+    [BepInDependency(R2API.SoundAPI.PluginGUID)]
+    [BepInDependency(R2API.DamageAPI.PluginGUID)]
+    [BepInDependency(R2API.LanguageAPI.PluginGUID)]
+    [BepInPlugin("com.Moffein.BanditDynamite", "Bandit Dynamite", "1.1.3")]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     public class BanditDynamite : BaseUnityPlugin
     {

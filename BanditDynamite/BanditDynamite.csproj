@@ -78,6 +78,21 @@
     <Reference Include="R2API">
       <HintPath>libs\R2API\R2API.dll</HintPath>
     </Reference>
+    <Reference Include="R2API.ContentManagement">
+      <HintPath>libs\R2API\R2API.ContentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="R2API.Core">
+      <HintPath>libs\R2API\R2API.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="R2API.Language">
+      <HintPath>libs\R2API\R2API.Language.dll</HintPath>
+    </Reference>
+    <Reference Include="R2API.Prefab">
+      <HintPath>libs\R2API\R2API.Prefab.dll</HintPath>
+    </Reference>
+    <Reference Include="R2API.Sound">
+      <HintPath>libs\R2API\R2API.Sound.dll</HintPath>
+    </Reference>
     <Reference Include="RoR2">
       <HintPath>libs\RoR2.dll</HintPath>
     </Reference>
