@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EF67CF0C-B3D6-4794-A64A-2CEC218A6519}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{EF67CF0C-B3D6-4794-A64A-2CEC218A6519}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_MoffeinBanditDynamite_explode" ID="{DA8EE3EE-1C71-4F3F-9440-000AECC509D9}">
+					<ChildrenList>
+						<Action Name="" ID="{B7E51535-CC60-45B8-A31B-3BE0623488A6}" ShortID="272795725">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BanditDynamite_1" ID="{0B6D5B4F-FF5A-4F3D-839E-1B3A4FB20C86}" WorkUnitID="{9FB32515-A69F-43D1-BD44-FFC5427C99F5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MoffeinBanditDynamite_toss" ID="{CB0078AC-7C37-4B8D-92C7-9C86D4730DCF}">
+					<ChildrenList>
+						<Action Name="" ID="{254557D7-CCBC-4D48-B451-2048CAEBF791}" ShortID="746320090">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BanditDynamite_2" ID="{5FA8CE58-D825-4E8A-B413-98F7398276AB}" WorkUnitID="{9FB32515-A69F-43D1-BD44-FFC5427C99F5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

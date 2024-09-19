@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2094736807	Play_MoffeinBanditDynamite_explode			\Default Work Unit\Play_MoffeinBanditDynamite_explode	
+	3269198925	Play_MoffeinBanditDynamite_toss			\Default Work Unit\Play_MoffeinBanditDynamite_toss	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	322651738	BanditDynamite_2	C:\Users\User\Desktop\Development\RoR2\BanditDynamite\Wwise_BanditDynamite\.cache\Windows\SFX\BanditDynamite_2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\BanditDynamite_2		39904
+	960186484	BanditDynamite_1	C:\Users\User\Desktop\Development\RoR2\BanditDynamite\Wwise_BanditDynamite\.cache\Windows\SFX\BanditDynamite_1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\BanditDynamite_1		353384
+

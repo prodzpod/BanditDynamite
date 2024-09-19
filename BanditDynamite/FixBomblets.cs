@@ -9,7 +9,7 @@ namespace BanditDynamite
 {
     public class FireBomblets
     {
-        static int[] bomblets = new int[BanditDynamite.cbBombletCount];
+        static int[] bomblets = new int[Main.cbBombletCount];
         static Quaternion GetRandomDirectionForChild(ProjectileExplosion self)
         {
             Quaternion lhs = Quaternion.AngleAxis(RoR2Application.rng.nextInt + UnityEngine.Random.Range(0f, RoR2Application.rng.nextInt), Vector3.forward);
@@ -24,7 +24,7 @@ namespace BanditDynamite
         static void FireBomblet(ProjectileExplosion self)
         {
             Quaternion randomDirectionForChild = GetRandomDirectionForChild(self);
-            GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(BanditDynamite.ClusterBombletObject, self.transform.position, randomDirectionForChild);
+            GameObject gameObject = UnityEngine.Object.Instantiate<GameObject>(Main.ClusterBombletObject, self.transform.position, randomDirectionForChild);
             ProjectileController component = gameObject.GetComponent<ProjectileController>();
             if (component)
             {
@@ -55,7 +55,7 @@ namespace BanditDynamite
                         var c = self.gameObject.GetComponent<ModdedDamageTypeHolderComponent>();
                         if (c)
                         {
-                            if (c.Has(BanditDynamite.ClusterBombDamage))
+                            if (c.Has(Main.ClusterBombDamage))
                             {
                                 if (NetworkServer.active)
                                 {

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3DB217CF-49A7-4BCC-8216-B3DCE1B2DBC1}" SchemaVersion="119">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{3DB217CF-49A7-4BCC-8216-B3DCE1B2DBC1}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="BanditDynamite" ID="{BA91D840-93D6-4113-9380-EA993DA684A3}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_MoffeinBanditDynamite_toss" ID="{CB0078AC-7C37-4B8D-92C7-9C86D4730DCF}" WorkUnitID="{EF67CF0C-B3D6-4794-A64A-2CEC218A6519}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MoffeinBanditDynamite_explode" ID="{DA8EE3EE-1C71-4F3F-9440-000AECC509D9}" WorkUnitID="{EF67CF0C-B3D6-4794-A64A-2CEC218A6519}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

@@ -1,9 +1,6 @@
-﻿using EntityStates;
+﻿using BanditDynamite;
 using RoR2;
 using RoR2.Projectile;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 
 namespace EntityStates.Moffein.BanditDynamite
@@ -13,35 +10,35 @@ namespace EntityStates.Moffein.BanditDynamite
         public override void OnEnter()
         {
             base.OnEnter();
-            this.duration = ClusterBomb.baseDuration / this.attackSpeedStat;
-            Ray aimRay = base.GetAimRay();
-            base.StartAimMode(aimRay, 2f, false);
-            base.PlayAnimation("Gesture, Additive", "SlashBlade", "SlashBlade.playbackRate", this.duration);
-            Util.PlaySound("Play_MoffeinBanditDynamite_toss", base.gameObject);
-            if (base.isAuthority)
+            duration = baseDuration / attackSpeedStat;
+            Ray aimRay = GetAimRay();
+            StartAimMode(aimRay, 2f, false);
+            PlayAnimation("Gesture, Additive", "SlashBlade", "SlashBlade.playbackRate", duration);
+            Util.PlaySound("Play_MoffeinBanditDynamite_toss", gameObject);
+            if (isAuthority)
             {
-                if (base.characterMotor && !base.characterMotor.isGrounded)
+                if (characterMotor && !characterMotor.isGrounded)
                 {
-                    base.characterMotor.velocity = new Vector3(base.characterMotor.velocity.x, Mathf.Max(base.characterMotor.velocity.y, 6), base.characterMotor.velocity.z);   //Bandit2 FireShiv Shorthop Velocity = 6
+                    characterMotor.velocity = new Vector3(characterMotor.velocity.x, Mathf.Max(characterMotor.velocity.y, 6), characterMotor.velocity.z);   //Bandit2 FireShiv Shorthop Velocity = 6
                 }
-
-                ProjectileManager.instance.FireProjectile(ClusterBomb.projectilePrefab, aimRay.origin, Util.QuaternionSafeLookRotation(aimRay.direction), base.gameObject, this.damageStat * ClusterBomb.damageCoefficient, 0f, Util.CheckRoll(this.critStat, base.characterBody.master), DamageColorIndex.Default, null, -1f);
+                // big jank way of fixing this until persuadopulse give me an actual fix
+                ProjectileManager.instance.FireProjectile(projectilePrefab, aimRay.origin + (aimRay.direction * 1.5f), Util.QuaternionSafeLookRotation(aimRay.direction), gameObject, damageStat * damageCoefficient, 0f, Util.CheckRoll(critStat, characterBody.master), DamageColorIndex.Default, null, -1f);
             }
         }
 
         public override void FixedUpdate()
         {
             base.FixedUpdate();
-            if (base.fixedAge >= this.duration && base.isAuthority)
+            if (fixedAge >= duration && isAuthority)
             {
-                this.outer.SetNextStateToMain();
+                outer.SetNextStateToMain();
                 return;
             }
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()
         {
-            if (base.inputBank && base.inputBank.skill2.down)
+            if (inputBank && inputBank.skill2.down)
             {
                 return InterruptPriority.PrioritySkill;
             }
