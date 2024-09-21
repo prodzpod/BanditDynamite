@@ -20,7 +20,7 @@ namespace BanditDynamite
     [BepInDependency(SoundAPI.PluginGUID)]
     [BepInDependency(DamageAPI.PluginGUID)]
     [BepInDependency(LanguageAPI.PluginGUID)]
-    [BepInPlugin("com.Moffein.BanditDynamite", "Bandit Dynamite", "1.1.3")]
+    [BepInPlugin("com.Moffein.BanditDynamite", "Bandit Dynamite", "1.1.5")]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     public class Main : BaseUnityPlugin
     {

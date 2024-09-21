@@ -3,14 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{9FB32515-A69F-43D1-BD44-FFC5427C99F5}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="BanditDynamite_2" ID="{5FA8CE58-D825-4E8A-B413-98F7398276AB}" ShortID="485633165">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-3</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
+				<ActorMixer Name="mixer" ID="{34E2AB02-C863-46AB-9CBA-1895FC67C4F9}" ShortID="535984308">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F69CF709-5FCB-46C2-B844-EFD736ADD94A}"/>
@@ -20,47 +13,105 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="BanditDynamite_2" ID="{86E81281-0319-44D2-92E4-17D678CC0DE2}">
-							<Language>SFX</Language>
-							<AudioFile>BanditDynamite_2.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="322651738"/>
-							</MediaIDList>
-						</AudioFileSource>
+						<Sound Name="BanditDynamite_1" ID="{0B6D5B4F-FF5A-4F3D-839E-1B3A4FB20C86}" ShortID="581796054">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F69CF709-5FCB-46C2-B844-EFD736ADD94A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AE2A18EE-0E04-48AB-866D-17B584E8EF2F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BanditDynamite_1" ID="{8053FF42-377E-40A4-A1A7-CF8CB231A1FA}">
+									<Language>SFX</Language>
+									<AudioFile>BanditDynamite_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="960186484"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BanditDynamite_1" ID="{8053FF42-377E-40A4-A1A7-CF8CB231A1FA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BanditDynamite_2" ID="{5FA8CE58-D825-4E8A-B413-98F7398276AB}" ShortID="485633165">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F69CF709-5FCB-46C2-B844-EFD736ADD94A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AE2A18EE-0E04-48AB-866D-17B584E8EF2F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BanditDynamite_2" ID="{86E81281-0319-44D2-92E4-17D678CC0DE2}">
+									<Language>SFX</Language>
+									<AudioFile>BanditDynamite_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="322651738"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BanditDynamite_2" ID="{86E81281-0319-44D2-92E4-17D678CC0DE2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="BanditDynamite_2" ID="{86E81281-0319-44D2-92E4-17D678CC0DE2}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="BanditDynamite_1" ID="{0B6D5B4F-FF5A-4F3D-839E-1B3A4FB20C86}" ShortID="581796054">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-11</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F69CF709-5FCB-46C2-B844-EFD736ADD94A}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{AE2A18EE-0E04-48AB-866D-17B584E8EF2F}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="BanditDynamite_1" ID="{8053FF42-377E-40A4-A1A7-CF8CB231A1FA}">
-							<Language>SFX</Language>
-							<AudioFile>BanditDynamite_1.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="960186484"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="BanditDynamite_1" ID="{8053FF42-377E-40A4-A1A7-CF8CB231A1FA}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{0AD0DA73-4180-44C4-B002-201695BBC715}" ShortID="756844481">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Volume_SFX" ID="{52F603E8-7447-4E79-9D0C-0E9ED4E5411B}" WorkUnitID="{B06F1625-F8BC-4857-9C64-79D2EFCF8F43}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{6D948801-7673-4DF8-983B-AF79093CF08D}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

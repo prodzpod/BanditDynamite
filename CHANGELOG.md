@@ -1,3 +1,7 @@
+1.1.5
+
+- sfx now takes volume into account
+
 1.1.4
 
 - fixed(?) weird collision

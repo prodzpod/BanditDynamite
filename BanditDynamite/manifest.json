@@ -1,6 +1,6 @@
 {
   "name": "Bandit_Dynamite_Toss",
-  "version_number": "1.1.4",
+  "version_number": "1.1.5",
   "website_url": "https://github.com/prodzpod/BanditDynamite",
   "description": "Adds Bandit's classic Dynamite Toss from RoR1 as an alt skill.",
   "dependencies": [
