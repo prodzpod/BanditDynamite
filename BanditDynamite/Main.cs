@@ -20,7 +20,7 @@ namespace BanditDynamite
     [BepInDependency(SoundAPI.PluginGUID)]
     [BepInDependency(DamageAPI.PluginGUID)]
     [BepInDependency(LanguageAPI.PluginGUID)]
-    [BepInPlugin("com.Moffein.BanditDynamite", "Bandit Dynamite", "1.1.5")]
+    [BepInPlugin("com.Moffein.BanditDynamite", "Bandit Dynamite", "1.1.6")]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
     public class Main : BaseUnityPlugin
     {
@@ -64,7 +64,7 @@ namespace BanditDynamite
                 bool isDynamiteBundle = false;
                 bool banditAttacker = false;
                 bool resetCooldown = (damageInfo.damageType & DamageType.ResetCooldownsOnKill) > 0 || (damageInfo.damageType & DamageType.GiveSkullOnKill) > 0;
-                AssignDynamiteTeamFilter ad = self.gameObject.GetComponent<AssignDynamiteTeamFilter>();
+                AssignDynamiteTeamFilter ad = self.GetComponent<AssignDynamiteTeamFilter>();
                 if (ad)
                 {
                     isDynamiteBundle = true;
@@ -87,14 +87,14 @@ namespace BanditDynamite
                         ad.fired = true;
                         damageInfo.crit = true;
                         damageInfo.procCoefficient = 0f;
-                        ProjectileImpactExplosion pie = self.gameObject.GetComponent<ProjectileImpactExplosion>();
+                        ProjectileImpactExplosion pie = self.GetComponent<ProjectileImpactExplosion>();
                         if (pie)
                         {
                             pie.blastRadius *= 2f;
                             pie.falloffModel = BlastAttack.FalloffModel.None;
                         }
 
-                        ProjectileDamage pd = self.gameObject.GetComponent<ProjectileDamage>();
+                        ProjectileDamage pd = self.GetComponent<ProjectileDamage>();
                         if (pd)
                         {
                             if (resetCooldown)
